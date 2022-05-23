@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="861.0" style="-fx-background-color: #2660A4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="truthTableTester.Controller">
+   <stylesheets>
+      
+   </stylesheets>
+   <children>
+      <Label layoutX="214.0" layoutY="36.0" text="Truth Table Tester" textFill="#edd211">
+         <font>
+            <Font name="Century Gothic Bold" size="53.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="157.0" text="Variable 1" textFill="#edd211">
+         <font>
+            <Font name="Century Gothic" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="399.0" text="Variable 2" textFill="#edd211">
+         <font>
+            <Font name="Century Gothic" size="25.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="variableOneBox" layoutX="46.0" layoutY="195.0" prefHeight="45.0" prefWidth="220.0" promptText="Select variable value" />
+      <ComboBox fx:id="variableTwoBox" layoutX="46.0" layoutY="440.0" prefHeight="45.0" prefWidth="220.0" promptText="Select variable value" />
+      <Label layoutX="46.0" layoutY="283.0" text="Logical Operation" textFill="#edd211">
+         <font>
+            <Font name="Century Gothic" size="25.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="logicalOperationBox" layoutX="46.0" layoutY="325.0" prefHeight="45.0" prefWidth="220.0" promptText="Select operation type" />
+      <Label fx:id="labelResult" layoutX="44.0" layoutY="499.0" text="RESULT" textFill="#edd211">
+         <font>
+            <Font name="Century Gothic Bold" size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelV1" alignment="CENTER" contentDisplay="CENTER" layoutX="46.0" layoutY="560.0" prefHeight="48.0" prefWidth="119.0" text="V1" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelOperation" alignment="CENTER" layoutX="189.0" layoutY="560.0" prefHeight="48.0" prefWidth="124.0" text="Operation" textFill="#edd211">
+         <font>
+            <Font name="Century Gothic Bold" size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelV2" alignment="CENTER" layoutX="321.0" layoutY="560.0" prefHeight="48.0" prefWidth="124.0" text="V2" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelEqualSign" alignment="CENTER" layoutX="457.0" layoutY="560.0" prefHeight="48.0" prefWidth="133.0" text="=" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelResultV" alignment="CENTER" layoutX="569.0" layoutY="560.0" prefHeight="48.0" prefWidth="220.0" text="ResultV" textFill="#edd211">
+         <font>
+            <Font name="Century Gothic Bold" size="38.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnGetResult" layoutX="347.0" layoutY="442.0" mnemonicParsing="false" onAction="#getResult" prefHeight="48.0" prefWidth="220.0" style="-fx-background-color: #edd211;" text="GET RESULT" textFill="#2660a4">
+         <font>
+            <Font name="Century Gothic Bold" size="29.0" />
+         </font>
+         <opaqueInsets>
+            <Insets top="10.0" />
+         </opaqueInsets>
+      </Button>
+      <Button fx:id="btnRefresh" layoutX="603.0" layoutY="442.0" mnemonicParsing="false" onAction="#refresh" prefHeight="48.0" prefWidth="220.0" style="-fx-background-color: #edd211;" text="REFRESH" textFill="#2660a4">
+         <font>
+            <Font name="Century Gothic Bold" size="29.0" />
+         </font>
+         <opaqueInsets>
+            <Insets top="10.0" />
+         </opaqueInsets>
+      </Button>
+      <GridPane alignment="CENTER" layoutX="347.0" layoutY="222.0" prefHeight="188.0" prefWidth="473.0" style="-fx-stroke: #fff;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="10.0" prefWidth="137.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="141.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.0" minWidth="10.0" prefWidth="176.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="labelVar1" alignment="CENTER" prefHeight="48.0" prefWidth="153.0" style="-fx-border-color: #fff; -fx-border-width: 1;" textFill="#edd211">
+               <font>
+                  <Font name="Century Gothic Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelVar2" alignment="CENTER" prefHeight="48.0" prefWidth="153.0" style="-fx-border-color: #fff; -fx-border-width: 1;" textFill="#edd211" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Century Gothic Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelVarResult12" alignment="CENTER" prefHeight="47.0" prefWidth="192.0" style="-fx-border-color: #fff; -fx-border-width: 1;" textFill="#edd211" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Century Gothic Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelVar3" alignment="CENTER" prefHeight="48.0" prefWidth="153.0" style="-fx-border-color: #fff; -fx-border-width: 1;" textFill="#edd211" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Century Gothic Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelVar4" alignment="CENTER" prefHeight="48.0" prefWidth="153.0" style="-fx-border-color: #fff; -fx-border-width: 1;" textFill="#edd211" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Century Gothic Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelVarResult34" alignment="CENTER" prefHeight="47.0" prefWidth="192.0" style="-fx-border-color: #fff; -fx-border-width: 1;" textFill="#edd211" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Century Gothic Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelVar5" alignment="CENTER" prefHeight="48.0" prefWidth="153.0" style="-fx-border-color: #fff; -fx-border-width: 1;" textFill="#edd211" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Century Gothic Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelVar6" alignment="CENTER" prefHeight="48.0" prefWidth="153.0" style="-fx-border-color: #fff; -fx-border-width: 1;" textFill="#edd211" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Century Gothic Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelVarResult56" alignment="CENTER" prefHeight="47.0" prefWidth="192.0" style="-fx-border-color: #fff; -fx-border-width: 1;" textFill="#edd211" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Century Gothic Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelVar7" alignment="CENTER" prefHeight="48.0" prefWidth="153.0" style="-fx-border-color: #fff; -fx-border-width: 1;" textFill="#edd211" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Century Gothic Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelVar8" alignment="CENTER" prefHeight="48.0" prefWidth="153.0" style="-fx-border-color: #fff; -fx-border-width: 1;" textFill="#edd211" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Century Gothic Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelVarResult78" alignment="CENTER" prefHeight="47.0" prefWidth="192.0" style="-fx-border-color: #fff; -fx-border-width: 1;" textFill="#edd211" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Century Gothic Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Label layoutX="347.0" layoutY="122.0" text="Please select the values of the variables and select the logical" textFill="#edd211">
+         <font>
+            <Font name="Century Gothic Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="347.0" layoutY="147.0" text="operation to test" textFill="#edd211">
+         <font>
+            <Font name="Century Gothic Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="347.0" layoutY="187.0" text="TRUTH TABLE" textFill="#edd211">
+         <font>
+            <Font name="Century Gothic Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelTruthTableName" layoutX="500.0" layoutY="186.0" prefHeight="32.0" prefWidth="320.0" text="Operation Name" textFill="#edd211">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnRevealTable" layoutX="696.0" layoutY="179.0" mnemonicParsing="false" onAction="#revealTable" prefHeight="32.0" prefWidth="124.0" style="-fx-background-color: #edd211;" text="REVEAL TABLE" textFill="#2660a4">
+         <font>
+            <Font name="Century Gothic Bold" size="13.0" />
+         </font>
+         <opaqueInsets>
+            <Insets top="10.0" />
+         </opaqueInsets>
+      </Button>
+   </children>
+</AnchorPane>
